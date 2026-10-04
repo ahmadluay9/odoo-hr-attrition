@@ -1,0 +1,9 @@
+[options]
+# This is the password that allows database operations:
+admin_passwd = your_master_password
+db_host = db
+db_port = 5432
+addons_path = /mnt/extra-addons
+data_dir = /var/lib/odoo
+http_interface = 0.0.0.0
+log_handler = :INFO,odoo.addons.rpc.controllers.xmlrpc:ERROR

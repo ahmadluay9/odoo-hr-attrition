@@ -1,0 +1,78 @@
+# =====================================================================
+# Odoo HR Attrition & Flight Risk Intelligence - .gitignore
+# =====================================================================
+
+# Environment & Secret Credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Active Odoo Local Configuration, Data Volumes & Filestores
+config/odoo.conf
+!config/odoo.conf.example
+odoo-web-data/
+odoo-db-data/
+filestore/
+sessions/
+
+# Python Bytecode & Compilation Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Python Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Packaging, Distributions & Builds
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# Testing, Linting & Coverage Reports
+.pytest_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+nosetests.xml
+coverage.xml
+*.cover
+.mypy_cache/
+
+# MLflow Tracking & Artifact Storage
+mlruns/
+mlartifacts/
+.mlflow/
+
+# Data Snapshots, Raw Dumps & Model Artifacts
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+*.dump
+*.sql
+*.sqlite3
+*.pkl
+*.joblib
+workforce_flight_risk_scored.csv
+
+# Streamlit Local Cache & Runtime Logs
+.streamlit/secrets.toml
+*.log
+nohup.out
+
+# IDE, Editor & OS Artifacts
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
